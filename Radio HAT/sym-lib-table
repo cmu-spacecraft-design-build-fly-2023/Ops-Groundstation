@@ -1,0 +1,4 @@
+(sym_lib_table
+  (version 7)
+  (lib (name "Mainboard")(type "Legacy")(uri "${KIPRJMOD}/Libraries/Mainboard.lib")(options "")(descr "PyCubed satellite board resources"))
+)

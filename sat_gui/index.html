@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <script src="https://cesium.com/downloads/cesiumjs/releases/1.108/Build/Cesium/Cesium.js"></script>
+  <link href="https://cesium.com/downloads/cesiumjs/releases/1.108/Build/Cesium/Widgets/widgets.css" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Oswald&family=Roboto:wght@300;400&display=swap" rel="stylesheet">
+  <link href="style.css" rel="stylesheet">
+  <title>Ground Station GUI v0.0</title>
+</head>
+<body>
+  <h1>Ground Station GUI v0.0</h1>
+  <div id="infoContainer">
+    <h2>Latest Satellite Information</h2>
+    <p>UTC Date & Time: <b id="timeLabel"></b></p>
+    <p>Estimated Altitude: <b id="altitudeLabel"></b> degrees</p>
+    <p>Estimated Latitude: <b id="latitudeLabel"></b> degrees</p>
+    <p>Estimated Longitude: <b id="longitudeLabel"></b> km</p>
+  </div>
+  <div id="cesiumContainer"></div>
+  <script type="module" src="cesium_viz.js"></script>
+  <h2> Command Input and Console </h2>
+  <div id="consoleLog"></div>
+  <input id="consoleInput"></input>
+  <br></br>
+</body>
+</html>

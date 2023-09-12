@@ -1,0 +1,23 @@
+html,
+body {
+  margin: 0px;
+  padding: 5px;
+  height: 100%;
+  font-family:'Oswald';
+}
+h1 {
+    text-align:center;
+}
+#cesiumContainer {
+  height: 100%;
+}
+#consoleLog {
+    height: 500px;
+    width: 90%;
+    border-style: solid;
+    padding: 10px;
+}
+#consoleInput {
+    width: 90%;
+}
+

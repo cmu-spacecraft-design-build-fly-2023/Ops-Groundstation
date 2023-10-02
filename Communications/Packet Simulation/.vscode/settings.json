@@ -4,6 +4,7 @@
         "atomic": "c",
         "bitset": "c",
         "stdint.h": "c",
-        "header.h": "c"
+        "header.h": "c",
+        "socket.h": "c"
     }
 }

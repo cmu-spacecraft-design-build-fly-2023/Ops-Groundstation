@@ -18,6 +18,7 @@
 #include <sys/socket.h>
 #include <unistd.h>
 #include <stdint.h>
+#include "helpers/header.h"
 #define PORT 8080
 
 /**
@@ -41,7 +42,14 @@ int main(int argc, char const* argv[])
     struct sockaddr_in serv_addr;
 
     /* Sent or received values */
-    uint8_t send_num = 25;
+    header send_head;
+    send_head.version_number = 0b0;
+    send_head.packet_type = 0b0;
+    send_head.sec_header_flag = 0b0;
+    send_head.APID = 100;
+    send_head.sequence_flag = 0b11;
+    send_head.sequence_count = 0;
+    send_head.data_length = 100;
 
     /* Create client socket */
     if ((client_fd = socket(AF_INET, SOCK_STREAM, 0)) < 0) {
@@ -64,10 +72,18 @@ int main(int argc, char const* argv[])
         return -1;
     }
 
-    send(client_fd, &send_num, sizeof(send_num), 0);
-    printf("Initial number sent!\n");
-    valread = recv(client_fd, &send_num, sizeof(send_num),0);
-    printf("%u\n", send_num);
+    send(client_fd, &send_head, sizeof(send_head), 0);
+    printf("Initial header sent!\n\n");
+    valread = recv(client_fd, &send_head, sizeof(send_head),0);
+    
+    printf("Version number: %u\n",send_head.version_number);
+    printf("Packet type: %u\n",send_head.packet_type);
+    printf("Secondary header flag: %u\n",send_head.sec_header_flag);
+    printf("APID: %u\n",send_head.APID);
+
+    printf("Sequence flag: %u\n",send_head.sequence_flag);
+    printf("Sequence count: %u\n",send_head.sequence_count);
+    printf("Data length: %u\n\n",send_head.data_length);
   
     /* closing the connected socket */
     close(client_fd);

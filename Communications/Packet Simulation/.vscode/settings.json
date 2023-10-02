@@ -3,6 +3,7 @@
         "in.h": "c",
         "atomic": "c",
         "bitset": "c",
-        "stdint.h": "c"
+        "stdint.h": "c",
+        "header.h": "c"
     }
 }

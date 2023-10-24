@@ -60,7 +60,7 @@
         "version": 2
       },
       "rule_severities": {
-        "annular_width": "error",
+        "annular_width": "ignore",
         "clearance": "error",
         "connection_width": "warning",
         "copper_edge_clearance": "error",
@@ -173,9 +173,11 @@
       ],
       "track_widths": [
         0.0,
+        0.0,
         0.2,
         0.5,
         1.0,
+        1.6,
         2.15
       ],
       "via_dimensions": [
@@ -194,6 +196,10 @@
         {
           "diameter": 1.2,
           "drill": 0.6
+        },
+        {
+          "diameter": 1.8,
+          "drill": 0.9
         }
       ],
       "zones_allow_external_fillets": false

@@ -60,7 +60,7 @@
         "version": 2
       },
       "rule_severities": {
-        "annular_width": "error",
+        "annular_width": "ignore",
         "clearance": "error",
         "connection_width": "warning",
         "copper_edge_clearance": "error",
@@ -174,18 +174,19 @@
       "track_widths": [
         0.0,
         0.2,
+        0.35925,
         0.5,
         1.0,
-        2.15
+        1.5,
+        2.0,
+        2.15,
+        2.3,
+        2.4
       ],
       "via_dimensions": [
         {
           "diameter": 0.0,
           "drill": 0.0
-        },
-        {
-          "diameter": 0.6,
-          "drill": 0.3
         },
         {
           "diameter": 0.8,
@@ -194,6 +195,10 @@
         {
           "diameter": 1.2,
           "drill": 0.6
+        },
+        {
+          "diameter": 1.8,
+          "drill": 0.9
         }
       ],
       "zones_allow_external_fillets": false
@@ -486,6 +491,14 @@
       "version": 1
     },
     "net_format_name": "",
+    "ngspice": {
+      "fix_include_paths": true,
+      "meta": {
+        "version": 0
+      },
+      "model_mode": 0,
+      "workbook_filename": ""
+    },
     "page_layout_descr_file": "",
     "plot_directory": "",
     "spice_current_sheet_as_root": false,

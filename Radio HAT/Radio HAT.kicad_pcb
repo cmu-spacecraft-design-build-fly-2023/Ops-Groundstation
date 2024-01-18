@@ -146,7 +146,7 @@
   (net 38 "/REG_POT")
   (net 39 "unconnected-(RV1-Pad3)")
   (net 40 "/V_RF")
-  (net 41 "Net-(D1-A)")
+  (net 41 "Net-(D1-K)")
 
   (footprint "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder" (layer "F.Cu")
     (tstamp 048b09c7-9867-4a23-bbd8-8aae23c6081b)
@@ -194,7 +194,7 @@
     (pad "1" smd roundrect (at -1 0 180) (size 1.2 1.4) (layers "F.Cu" "F.Paste" "F.Mask") (roundrect_rratio 0.2083333333)
       (net 2 "GND") (pintype "passive") (tstamp adccbccb-b21b-46e2-b390-749797a69450))
     (pad "2" smd roundrect (at 1 0 180) (size 1.2 1.4) (layers "F.Cu" "F.Paste" "F.Mask") (roundrect_rratio 0.2083333333)
-      (net 41 "Net-(D1-A)") (pintype "passive") (tstamp bba39db9-d179-44e4-a5c3-cb59f4ccdfe9))
+      (net 41 "Net-(D1-K)") (pintype "passive") (tstamp bba39db9-d179-44e4-a5c3-cb59f4ccdfe9))
     (model "${KICAD6_3DMODEL_DIR}/Resistor_SMD.3dshapes/R_0805_2012Metric.wrl"
       (offset (xyz 0 0 0))
       (scale (xyz 1 1 1))
@@ -1446,7 +1446,7 @@
 
   (footprint "LED_SMD:LED_0805_2012Metric_Pad1.15x1.40mm_HandSolder" (layer "F.Cu")
     (tstamp aff6e6c8-8476-4d4c-a95b-b8b8ff639574)
-    (at 121.5 132.5 180)
+    (at 121.5 132.5)
     (descr "LED SMD 0805 (2012 Metric), square (rectangular) end terminal, IPC_7351 nominal, (Body size source: https://docs.google.com/spreadsheets/d/1BsfQQcO9C6DZCsRaXUlFlo91Tg2WpOkGARC1WS5S8t0/edit?usp=sharing), generated with kicad-footprint-generator")
     (tags "LED handsolder")
     (property "Sheetfile" "Radio HAT.kicad_sch")
@@ -1491,10 +1491,10 @@
       (stroke (width 0.1) (type solid)) (layer "F.Fab") (tstamp 9ec484f9-8601-457e-80f9-6a5f2b0c6950))
     (fp_line (start 1 0.6) (end 1 -0.6)
       (stroke (width 0.1) (type solid)) (layer "F.Fab") (tstamp df5a3d51-fae2-491b-b3c3-d4a323ef2dd0))
-    (pad "1" smd roundrect (at -1.025 0 180) (size 1.15 1.4) (layers "F.Cu" "F.Paste" "F.Mask") (roundrect_rratio 0.2173913043)
-      (net 40 "/V_RF") (pinfunction "K") (pintype "passive") (tstamp d8c9df03-25a6-4d2d-a16d-c9bb56fc3db9))
-    (pad "2" smd roundrect (at 1.025 0 180) (size 1.15 1.4) (layers "F.Cu" "F.Paste" "F.Mask") (roundrect_rratio 0.2173913043)
-      (net 41 "Net-(D1-A)") (pinfunction "A") (pintype "passive") (tstamp 3fedfa8b-64d3-411e-bda3-a98cc6000596))
+    (pad "1" smd roundrect (at -1.025 0) (size 1.15 1.4) (layers "F.Cu" "F.Paste" "F.Mask") (roundrect_rratio 0.2173913043)
+      (net 41 "Net-(D1-K)") (pinfunction "K") (pintype "passive") (tstamp d8c9df03-25a6-4d2d-a16d-c9bb56fc3db9))
+    (pad "2" smd roundrect (at 1.025 0) (size 1.15 1.4) (layers "F.Cu" "F.Paste" "F.Mask") (roundrect_rratio 0.2173913043)
+      (net 40 "/V_RF") (pinfunction "A") (pintype "passive") (tstamp 3fedfa8b-64d3-411e-bda3-a98cc6000596))
     (model "${KICAD6_3DMODEL_DIR}/LED_SMD.3dshapes/LED_0805_2012Metric.wrl"
       (offset (xyz 0 0 0))
       (scale (xyz 1 1 1))
@@ -3196,8 +3196,8 @@
   (segment (start 143.5 127) (end 128 127) (width 0.5) (layer "In2.Cu") (net 40) (tstamp 82bb9ba0-54f5-4e6f-b948-530f9c1003e2))
   (segment (start 127 128) (end 127 131.5) (width 0.5) (layer "In2.Cu") (net 40) (tstamp e859c8d5-cfff-4fe5-ad33-d666c6ccb5fe))
   (segment (start 145 128.5) (end 143.5 127) (width 0.5) (layer "In2.Cu") (net 40) (tstamp fcd04c37-2ad4-41ef-bfb6-f2747321e125))
-  (segment (start 120.475 132.5) (end 120.5 132.475) (width 0.5) (layer "F.Cu") (net 41) (tstamp 268b3124-d673-4ec1-bec8-22ae98353b0d))
-  (segment (start 120.5 132.475) (end 120.5 130) (width 0.5) (layer "F.Cu") (net 41) (tstamp cc9dada4-56e6-45bc-8052-f2bbafc6a460))
+  (segment (start 120.5 132.475) (end 120.475 132.5) (width 0.35925) (layer "F.Cu") (net 41) (tstamp 254e67fe-638e-4b24-90f5-055cc4e546aa))
+  (segment (start 120.5 130) (end 120.5 132.475) (width 0.5) (layer "F.Cu") (net 41) (tstamp 3d2cb797-73a3-4843-873d-0b66aa353066))
 
   (zone (net 1) (net_name "+6V") (layer "F.Cu") (tstamp 09fad58a-f083-4e44-8f00-04d0fdb380a0) (hatch edge 0.5)
     (priority 3)

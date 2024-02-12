@@ -1598,7 +1598,7 @@
   )
 
   (text "Decoupling caps for 3V3, only populate \nif using 3V3 from Pi (if R7 not DNP)\n\nC5: 0.1uF, C6: 10uF"
-    (at 59.69 77.47 0)
+    (at 52.07 77.47 0)
     (effects (font (size 1.27 1.27)) (justify left bottom))
     (uuid 53058cc1-e91a-4f55-9095-df56c026049a)
   )
@@ -1621,7 +1621,7 @@
     (effects (font (size 1.27 1.27) (color 0 0 0 1)) (justify left bottom))
     (uuid ba6d41e0-f9a1-4587-b3a4-d92107bddbb3)
   )
-  (text "C3 & C4 needs to be rated\nfor AT LEAST 10V" (at 78.74 59.69 0)
+  (text "C3 & C4 needs to be rated\nfor AT LEAST 10V" (at 72.39 64.77 0)
     (effects (font (size 1.27 1.27)) (justify left bottom))
     (uuid d2970883-01ae-4860-af8f-b43a671d62d3)
   )
